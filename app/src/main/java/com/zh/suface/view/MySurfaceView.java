@@ -1,4 +1,4 @@
-package com.zh.suface;
+package com.zh.suface.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
