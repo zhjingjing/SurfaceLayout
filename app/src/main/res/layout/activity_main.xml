@@ -127,7 +127,7 @@
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/surface_teacher"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_layout"
         app:layout_constraintTop_toBottomOf="@id/ll_student">
 
         <com.zh.suface.view.MySurfaceView
@@ -150,23 +150,70 @@
         android:src="@mipmap/ic_launcher"
         android:id="@+id/iv_back" />
 
-    <com.zh.suface.view.MySurfaceView
-        android:id="@+id/surface_teacher"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        app:layout_constraintStart_toEndOf="@+id/iv_back"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="15dp" />
+        android:layout_height="wrap_content">
 
+        <com.zh.suface.view.MySurfaceView
+            android:id="@+id/surface_teacher"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_back"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_teacher"
+            android:layout_marginBottom="15dp" />
 
-    <TextView
-        android:id="@+id/tv_img_path"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/colorPrimary"
-        app:layout_constraintStart_toEndOf="@+id/surface_teacher"
-        app:layout_constraintTop_toTopOf="@+id/surface_teacher"
-        app:layout_constraintBottom_toBottomOf="@+id/surface_teacher"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <com.zh.suface.view.MySurfaceView
+            android:id="@+id/surface_me"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@+id/surface_teacher"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_me"
+            android:layout_marginBottom="15dp" />
+
+        <TextView
+            android:id="@+id/tv_teacher"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/surface_teacher"
+            app:layout_constraintEnd_toEndOf="@+id/surface_teacher"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/bg_white"
+            android:text="teacher"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tv_me"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/surface_me"
+            app:layout_constraintEnd_toEndOf="@+id/surface_me"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/bg_white"
+            android:text="me"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tv_img_path"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            android:background="@color/colorPrimary"
+            app:layout_constraintStart_toEndOf="@+id/surface_teacher"
+            app:layout_constraintTop_toTopOf="@+id/surface_teacher"
+            app:layout_constraintBottom_toBottomOf="@+id/surface_teacher"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
