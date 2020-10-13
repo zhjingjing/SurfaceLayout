@@ -130,13 +130,19 @@
         app:layout_constraintBottom_toTopOf="@+id/bottom_layout"
         app:layout_constraintTop_toBottomOf="@id/ll_student">
 
-        <com.zh.suface.view.MySurfaceView
+        <com.zh.suface.view.MyRelationLayout
             android:id="@+id/surface_center"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true" />
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/ic_launcher" />
+        </com.zh.suface.view.MyRelationLayout>
     </RelativeLayout>
 
     <ImageView
@@ -163,7 +169,7 @@
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_marginStart="10dp"
-            app:layout_constraintStart_toEndOf="@+id/iv_back"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="@+id/tv_teacher"
             android:layout_marginBottom="15dp" />
 
